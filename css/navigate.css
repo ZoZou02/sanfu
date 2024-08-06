@@ -1,0 +1,128 @@
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.sidebar {
+    float: left;
+    width: 100px;
+    margin-left: -100px;
+    height: 100%;
+    background-color: #2c5f4e;
+    overflow: hidden;
+    transition: 0.8s all;
+    z-index: 10;
+    position: absolute;
+    animation-duration: 0.8s;
+    animation-name: moveLeft_sidebar;
+}
+
+.side {
+    margin-left: 0;
+}
+
+/*靠边*/
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*去点*/
+.sidebar ul li {
+    list-style: none;
+}
+
+/*去下划线*/
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    height: 80px;
+    width: 100%;
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
+    display: block;
+    transition: 0.6s all;
+}
+
+.sidebar ul li a:hover {
+    background: #95a5a6;
+}
+
+.btn {
+    float: left;
+    padding: 0 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Ionicons;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+}
+
+.btn:before {
+    content: '\f20d';
+    /*z-index: 10;*/
+    /*position: relative;*/
+    /*margin-left: 100px;*/
+    animation-duration: 0.8s;
+    animation-name: moveLeft;
+    margin-left: 0;
+}
+
+@keyframes moveRight {
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: 100px;
+    }
+}
+
+@keyframes moveLeft {
+    from{
+        margin-left: 100px;
+    }
+    to{
+        margin-left: 0;
+    }
+}
+
+@keyframes moveLeft_sidebar {
+    from{
+        margin-left: 0;
+    }
+    to{
+        margin-left: -100px;
+    }
+}
+
+.btnc:before {
+    content: '\f12a';
+    /*z-index: 10;*/
+    /*position: relative;*/
+    animation-duration: 0.8s;
+    animation-name: moveRight;
+    margin-left: 100px;
+}
+
+
+.ion-chevron-left{
+    float: left;
+    padding: 0 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: Ionicons;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    margin-top: 5px;
+}
+
