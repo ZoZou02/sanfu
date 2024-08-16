@@ -13,16 +13,7 @@
     <link rel="stylesheet" href="./css/navigate.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"/>
-    <script>
-  function initSakanaWidget() {
-    new SakanaWidget().mount('#sakana-widget');
-  }
-</script>
-<script
-  async
-  onload="initSakanaWidget()"
-  src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
-></script>
+
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
@@ -55,9 +46,19 @@
         </div>
     </div>
 
-
+    <div id="sakana-widget"></div>
 
     <script src="scripts/sidebar.js"></script>
+    <script>
+        function initSakanaWidget() {
+          new SakanaWidget().mount('#sakana-widget');
+        }
+      </script>
+      <script
+        async
+        onload="initSakanaWidget()"
+        src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
+      ></script>
 
 </body>
 
